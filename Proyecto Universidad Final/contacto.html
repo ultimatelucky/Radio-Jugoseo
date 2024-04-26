@@ -77,13 +77,13 @@
                     
                   <button type="submit">Iniciar Session</button>
                   <label>
-                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                    <input type="checkbox" checked="checked" name="remember"> Recuerdame
                   </label>
                 </div>
             
                 <div class="container" style="background-color:#f1f1f1">
                   <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancelar</button>
-                  <span class="psw">Forgot <a href="#">password?</a></span>
+                  <span class="psw"><a href="#">Olvidaste la Contraseña?</a></span>
                 </div>
               </form>
             </div>
@@ -105,7 +105,7 @@
                   <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
                   
                   <label>
-                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Recuerdame
                   </label>
             
                   <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
@@ -153,8 +153,8 @@
       <div class="row">
         <!-------------------Inicio de Columna de Informacion------------->
         <div class="col-4 parrafo">
-          <h1>¿Que Puedo Enviar?</h1>
-          <p>Puedes enviar tus sugerencias, Demos, Saludos,Canciones,Postulaciones,tu Musica</p>
+          <h1 style="color: white;">¿Que Puedo Enviar?</h1>
+          <p style="color: white;">Puedes enviar tus sugerencias, Demos, Saludos,Canciones,Postulaciones,tu Musica</p>
           <p>Envianos tus sugerencias o ideas para los programas videos imagenes saludos a la radio todo lo que nos pueda aportar algo positivo</p>
           <p>Puedes Enviarnos tus demos para postular como Dj o Animador de la Radio pone todo el power en tus presentaciones para sorprender a nuestro reclutador</p>
           <p>Si eres Artista y quieres ser escuchado puedes enviar tus canciones nuestros dj se encargaran de trasmitirlas  en los programas</p>
@@ -165,11 +165,12 @@
         <div class="col-8">
           <form class="row g-3 needs-validation" novalidate>
             <div class="col-md position-relative">
-              <label for="validationTooltip01" class="form-label"  >Nombre</label>
+              <label for="validationTooltip01" class="form-label" >Nombre</label>
               <input
                 type="text"
                 class="form-control"
                 id="validationTooltip01"
+                placeholder="Ingresa tu Nombre"
                 autocomplete="off"
                 required
               />
@@ -183,6 +184,7 @@
                 type="text"
                 class="form-control"
                 id="validationTooltip02"
+                placeholder="Ingresa tu Apellido"
                 autocomplete="off"
                 required
               />
@@ -228,7 +230,7 @@
               <textarea
                 class="form-control"
                 id="validationTooltip01"
-                placeholder="Required example textarea"
+                placeholder="Escribe aqui tu Mensaje"
                 required
               ></textarea>
               <div class="invalid-tooltip">Por Favor Escribe un mensaje.</div>
