@@ -297,6 +297,39 @@ hr {
   display: table;
 }
 
+.noticia {
+  display: flex;
+  margin-bottom: 20px;
+}
+.noticia img {
+  width: 200px;
+  height: 200px;
+  margin-right: 20px;
+}
+.noticia h2 {
+  margin: 0;
+}
+
+.modal4 {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content4 {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
   .cancelbtn, .signupbtn {
