@@ -220,9 +220,9 @@
           <br />
           <br />
 
-          <div class="d-grid gap-2 col-sm-12 mx-auto justify-content-md-botom">
+          <div class="d-grid gap-2 col-sm-12 mx-auto justify-content-md-botom" id="miBoton">
             <a
-              href="galeria.html"
+              id="miboton"
               target="_blank"
               class="btn btn-primary"
               type="button" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Abrir Reproductor en otra ventana"
@@ -286,6 +286,12 @@ var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
       }
   }
   </script>
-
+<script >
+  var btn = document.getElementById("miBoton");
+btn.onclick = function() {
+    // Abrir una nueva ventana de 200x200 píxeles
+    window.open('https://www.google.com', '_blank', 'width=300,height=300');
+  }
+</script>
   </body>
 </html>
