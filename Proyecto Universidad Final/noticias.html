@@ -162,6 +162,13 @@
       <p style="color: white;">Un enlace de Google Drive que supuestamente contiene 17 pistas del esperado nuevo álbum de Swift, "The Tortured Poets Department" (TTPD), ha estado circulando en internet en los últimos días y la gente está enfadada, triste y feliz a partes iguales.</p>
   </div>
 </div>
+<div id="Lugar">
+  <!-- Aquí se mostrará la información del lugar -->
+</div>
+
+<div id="Clima">
+  <!-- Aquí se mostrará la información del clima -->
+</div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -218,5 +225,68 @@ var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
       }
   }
 </script>
+<script>
+  console.log("Script loaded"); // Verificar si el script se está cargando correctamente
+
+  // Realizar una solicitud a la API de WeatherAPI
+  fetch('http://api.weatherapi.com/v1/current.json?key=945316d982ba404d8a2202405241605&q=chile&aqi=no')
+      .then(response => response.json()) // Convertir la respuesta a JSON
+      .then(data => {
+          console.log("Data received:", data); // Verificar si los datos se reciben correctamente
+
+          // Manipular los datos recibidos
+          const location = data.location;
+          const currentWeather = data.current;
+
+          const weatherInfo = `
+                    <h2>Weather in ${location.name}, ${location.country}</h2>
+                    <br>
+                    <p>Region: ${location.region}</p>
+                    <p>Timezone: ${location.tz_id}</p>
+                    <p>Local Time: ${location.localtime}</p>
+              `;
+
+          // Mostrar los datos en la página HTML
+          console.log("Inserting weather info into page"); // Verificar si los datos se están insertando en la página
+          document.getElementById('Lugar').innerHTML = weatherInfo;
+      })
+      .catch(error => {
+          console.error('Error fetching weather data:', error); // Verificar si hay errores al realizar la solicitud
+          document.getElementById('Lugar').innerHTML = "<p>Error fetching weather data. Please try again later.</p>"; // Mostrar un mensaje de error en la página
+      });
+</script>
+
+<script>
+  console.log("Script loaded"); // Verificar si el script se está cargando correctamente
+
+  // Realizar una solicitud a la API de WeatherAPI
+  fetch('http://api.weatherapi.com/v1/current.json?key=945316d982ba404d8a2202405241605&q=chile&aqi=no')
+      .then(response => response.json()) // Convertir la respuesta a JSON
+      .then(data => {
+          console.log("Data received:", data); // Verificar si los datos se reciben correctamente
+
+          // Manipular los datos recibidos
+          const location = data.location;
+          const currentWeather = data.current;
+
+          const weatherInfo = `
+              <h3>Current Weather</h3>
+              <p>Temperature: ${currentWeather.temp_c}°C</p>
+              <p>Condition: ${currentWeather.condition.text}</p>
+              <p>Wind: ${currentWeather.wind_kph} km/h, ${currentWeather.wind_dir}</p>
+              <p>Pressure: ${currentWeather.pressure_mb} mb</p>
+              <p>Humidity: ${currentWeather.humidity}%</p>
+              `;
+
+          // Mostrar los datos en la página HTML
+          console.log("Inserting weather info into page"); // Verificar si los datos se están insertando en la página
+          document.getElementById('Clima').innerHTML = weatherInfo;
+      })
+      .catch(error => {
+          console.error('Error fetching weather data:', error); // Verificar si hay errores al realizar la solicitud
+          document.getElementById('Clima').innerHTML = "<p>Error fetching weather data. Please try again later.</p>"; // Mostrar un mensaje de error en la página
+      });
+</script>
+
 </body>
 </html>

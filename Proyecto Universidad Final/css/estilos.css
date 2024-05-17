@@ -330,6 +330,18 @@ hr {
   width: 80%;
 }
 
+#Clima{
+  position:absolute;
+  right: 25px;
+  color: white;
+}
+
+#Lugar{
+  position:absolute;
+  left: 25px;
+  color: white;
+}
+
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
   .cancelbtn, .signupbtn {
