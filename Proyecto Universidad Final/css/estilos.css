@@ -331,14 +331,16 @@ hr {
 }
 
 #Clima{
-  position:absolute;
-  right: 25px;
+  display:block;
+  left: 1000px;
   color: white;
 }
 
+
+
 #Lugar{
-  position:absolute;
-  left: 25px;
+  display:block;
+  left: 1000px;
   color: white;
 }
 

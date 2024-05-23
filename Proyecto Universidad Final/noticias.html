@@ -18,105 +18,105 @@
     <link rel="shortcut icon" href="img/favicon-32x32.png" />
 </head>
 <body>
-    <header class="p-1 text-bg-dark">
-        <div class="container">
-          <div
-            class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
-          >
-            <ul
-              class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 menux"
+  <header class="p-1 text-bg-dark">
+    <div class="container">
+      <div
+        class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
+      >
+        <ul
+          class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 menux"
+        >
+          <li>
+            <a href="index.html" class="nav-link px-2 text-white menux">Inicio</a>
+          </li>
+          <li><a href="noticias.html" class="nav-link px-2 text-white">Noticias</a></li>
+          <li>
+            <a href="galeria.html" class="nav-link px-2 text-white">Galleria</a>
+          </li>
+          <li>
+            <a href="tiendita.html" class="nav-link px-2 text-white">Tienda</a>
+          </li>
+          <li>
+            <a href="contacto.html" class="nav-link px-2 text-white"
+              >Contacto</a
             >
-              <li>
-                <a href="index.html" class="nav-link px-2 text-white menux">Inicio</a>
-              </li>
-              <li><a href="#" class="nav-link px-2 text-white">Noticias</a></li>
-              <li>
-                <a href="galeria.html" class="nav-link px-2 text-white">Galleria</a>
-              </li>
-              <li>
-                <a href="tiendita.html" class="nav-link px-2 text-white">Tienda</a>
-              </li>
-              <li>
-                <a href="contacto.html" class="nav-link px-2 text-white"
-                  >Contacto</a
-                >
-              </li>
-            </ul>
+          </li>
+        </ul>
+
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+          <input
+            type="search"
+            class="form-control form-control-dark text-bg-dark"
+            placeholder="Search..."
+            aria-label="Search"
+          />
+        </form>
+
+        <div class="text-end">
+          <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"  type="button" class="btn btn-outline-light me-2">
+            Iniciar sesion
+          </button>
+          <div id="id01" class="modal">
     
-            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-              <input
-                type="search"
-                class="form-control form-control-dark text-bg-dark"
-                placeholder="Search..."
-                aria-label="Search"
-              />
+            <form class="modal-content animate" action="/action_page.php" method="post">
+              <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                <img src="img/img_avatar2.png" alt="Avatar" class="avatar">
+              </div>
+          
+              <div class="container">
+                <label for="unname"><b>Usuario</b></label>
+                <input type="text" placeholder="Ingrese su Usuario" name="uname" id="unname"required>
+          
+                <label for="psw"><b>Contraseña</b></label>
+                <input type="password" placeholder="Ingrese su Contraseña" name="psw" id="psw" required>
+                  
+                <button type="submit">Iniciar Session</button>
+                <label>
+                  <input type="checkbox" checked="checked" name="remember"> Recuerdame
+                </label>
+              </div>
+          
+              <div class="container" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancelar</button>
+                <span class="psw"><a href="#">Olvidaste la Contraseña?</a></span>
+              </div>
             </form>
-    
-            <div class="text-end">
-              <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;"  type="button" class="btn btn-outline-light me-2">
-                Iniciar sesion
-              </button>
-              <div id="id01" class="modal">
-        
-                <form class="modal-content animate" action="/action_page.php" method="post">
-                  <div class="imgcontainer">
-                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-                    <img src="img/img_avatar2.png" alt="Avatar" class="avatar">
-                  </div>
-              
-                  <div class="container">
-                    <label for="uname"><b>Usuario</b></label>
-                    <input type="text" placeholder="Ingrese su Usuario" name="uname" required>
-              
-                    <label for="psw"><b>Contraseña</b></label>
-                    <input type="password" placeholder="Ingrese su Contraseña" name="psw" required>
-                      
-                    <button type="submit">Iniciar Session</button>
-                    <label>
-                      <input type="checkbox" checked="checked" name="remember"> Recuerdame
-                    </label>
-                  </div>
-              
-                  <div class="container" style="background-color:#f1f1f1">
-                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancelar</button>
-                    <span class="psw"><a href="#">Olvidaste la Contraseña?</a></span>
-                  </div>
-                </form>
+          </div>
+          <button onclick="document.getElementById('id02').style.display='block'" type="button" class="btn btn-warning" style="width:auto;">Registrarse</button>
+          <div id="id02" class="modal1">
+            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <form class="modal-content" action="/action_page.php">
+              <div class="container">
+                <h1 class="formu">Registrarse</h1>
+                <p>Por favor rellene el formulario para registrarse.</p>
+                <hr>
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" id="email" required>
+          
+                <label for="psw"><b>Contraseña</b></label>
+                <input type="password" placeholder="Enter Password" name="psw"  required>
+          
+                <label for="psw-repeat"><b>Repita su contraseña</b></label>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+                
+                <label>
+                  <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Recuerdame
+                </label>
+          
+                <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+          
+                <div class="clearfix">
+                  <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn1">Cancelar</button>
+                  <button type="submit" class="signupbtn">Registrarse</button>
+                </div>
               </div>
-              <button onclick="document.getElementById('id02').style.display='block'" type="button" class="btn btn-warning" style="width:auto;">Registrarse</button>
-              <div id="id02" class="modal1">
-                <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-                <form class="modal-content" action="/action_page.php">
-                  <div class="container">
-                    <h1 class="formu">Registrarse</h1>
-                    <p>Por favor rellene el formulario para registrarse.</p>
-                    <hr>
-                    <label for="email"><b>Email</b></label>
-                    <input type="text" placeholder="Enter Email" name="email" required>
-              
-                    <label for="psw"><b>Contraseña</b></label>
-                    <input type="password" placeholder="Enter Password" name="psw" required>
-              
-                    <label for="psw-repeat"><b>Repita su contraseña</b></label>
-                    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
-                    
-                    <label>
-                      <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Recuerdame
-                    </label>
-              
-                    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-              
-                    <div class="clearfix">
-                      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn1">Cancelar</button>
-                      <button type="submit" class="signupbtn">Registrarse</button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
+            </form>
           </div>
         </div>
-      </header>
+      </div>
+    </div>
+  </header>
       <div id="myModal4" class="modal4">
         <div class="modal-content4">
             <span class="close">&times;</span>
@@ -141,34 +141,43 @@
       </div>
     </div>
 <br>
-<div class="noticia">
-  <img src="img/mark.jpg" alt="Noticia Musical">
-  <div>
-      <h2><a href="https://cnnespanol.cnn.com/video/marc-anthony-album-estreno-orix/" target="_blank">Marc Anthony estrena nuevo álbum con varios ritmos latinos </a></h2>
-      <p style="color: white;">El cantante estadounidense Marc Anthony estrena su nuevo álbum "Muevense", un recorrido de varios géneros musicales y donde figuran canciones como "Amarte a la antigua", "Si te enamoro" y "Ale Ale".</p>
+<div class="container-fluid">
+<div class="row">
+  <div class="noticia col-10">
+    <img src="img/mark.jpg" alt="Noticia Musical">
+    <div>
+        <h2><a href="https://cnnespanol.cnn.com/video/marc-anthony-album-estreno-orix/" target="_blank">Marc Anthony estrena nuevo álbum con varios ritmos latinos </a></h2>
+        <p style="color: white;">El cantante estadounidense Marc Anthony estrena su nuevo álbum "Muevense", un recorrido de varios géneros musicales y donde figuran canciones como "Amarte a la antigua", "Si te enamoro" y "Ale Ale".</p>
+    </div>
   </div>
-</div>
-<div class="noticia">
-  <img src="img/nicky.jpg" alt="Noticia Musical">
-  <div>
-      <h2><a href="https://cnnespanol.cnn.com/video/nicky-jam-cangrinaje-trueno-showbiz/" target="_blank">Nicky Jam y Trueno regresan a los inicios del reguetón con "Cangrinaje" </a></h2>
-      <p style="color: white;">Nicky Jam estrenó este jueves el tema "Cangrinaje" junto al cantante argentino Trueno, con el que utilizan sonidos que recuerdan el origen del reguetón.</p>
+
+  <div class="col-2" id="Lugar">
+    <!-- Aquí se mostrará la información del clima -->
   </div>
-</div>
-<div class="noticia">
+
+  <div class="noticia col-10">
+    <img src="img/nicky.jpg" alt="Noticia Musical">
+    <div>
+        <h2><a href="https://cnnespanol.cnn.com/video/nicky-jam-cangrinaje-trueno-showbiz/" target="_blank">Nicky Jam y Trueno regresan a los inicios del reguetón con "Cangrinaje" </a></h2>
+        <p style="color: white;">Nicky Jam estrenó este jueves el tema "Cangrinaje" junto al cantante argentino Trueno, con el que utilizan sonidos que recuerdan el origen del reguetón.</p>
+    </div>
+  </div>
+ 
+  
+<div class="noticia col-10">
   <img src="img/taylor.jpg" alt="Noticia Musical">
   <div>
       <h2><a href="https://cnnespanol.cnn.com/2024/04/18/filtraron-nuevo-album-taylor-swift-esto-sabemos-trax/" target="_blank">¿Filtraron el nuevo álbum de Taylor Swift? Esto es lo que sabemos </a></h2>
       <p style="color: white;">Un enlace de Google Drive que supuestamente contiene 17 pistas del esperado nuevo álbum de Swift, "The Tortured Poets Department" (TTPD), ha estado circulando en internet en los últimos días y la gente está enfadada, triste y feliz a partes iguales.</p>
   </div>
 </div>
-<div id="Lugar">
-  <!-- Aquí se mostrará la información del lugar -->
-</div>
-
-<div id="Clima">
+<div class="col-2" id="Clima">
   <!-- Aquí se mostrará la información del clima -->
 </div>
+</div>
+</div>
+
+
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
